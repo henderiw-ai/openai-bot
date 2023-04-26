@@ -1,0 +1,5 @@
+{
+  "id": "watchcallbackfn",
+  "tokens": 117,
+  "data": "The WatchCallbackFn provides the watched KubeObject instance to the fn/controller. The function/controller uses the KubeObject for contextual information as extra metadata when the PopulateOwnResourcesFn or GenerateResourceFn are called. On top when processing the callback the fn can return an error, which is used by the sdk to determine readiness within the sdkThe WatchCallbackFn is called for each global watches resource.signature of the watchCallbackFn:type WatchCallbackFn func(*fn.KubeObject) errorIf the fn/controller is dependent on a global resource the fn/controller MUST implement the WatchCallbackFn."
+}

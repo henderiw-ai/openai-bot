@@ -1,0 +1,5 @@
+{
+  "id": "populateownresourcesfn",
+  "tokens": 172,
+  "data": "The PopulateOwnResourcesFn provides the for KubeObject instance to the fn/controller. The function/controller uses the for KubeObject + optionally the contextual information provided through the WatchCallbackFn and returns a list of child KRM resources as KubeObject. These child resource are defined by the fn/controller based on the content of the for KRM resource instance + the metadata.The PopulateOwnResourcesFn is called for each for KRM resource instance.The sdk will handle from here on the lifecycle of the child resources based on the OwnType. The sdk uses the ownerReference implemented through an annotation to identify child resource instanaces belonging to a for instancesignature of the populateOwnResourcesFn:type PopulateOwnResourcesFn func(*fn.KubeObject) (fn.KubeObjects, error)Any fn/controller that has own resources MUST implement the PopulateOwnResourcesFn."
+}

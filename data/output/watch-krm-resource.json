@@ -1,0 +1,5 @@
+{
+  "id": "watch-krm-resource",
+  "tokens": 87,
+  "data": "The Watch resource filter identifies KRM resources that the function/controller uses as additional information to define its outcomeThere are 2 types of watch resource filters:- global one:  - they are triggered through the WatchCallbackFn and can influence the readiness gate.  - e.g. ClusterCtx- instance based:  - they are relevant within the context of a for instance  - e.g. IP, VLAN within the NAD function/controller"
+}

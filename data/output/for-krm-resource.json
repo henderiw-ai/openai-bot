@@ -1,0 +1,5 @@
+{
+  "id": "for-krm-resource",
+  "tokens": 178,
+  "data": "Each function or controller has to implement a single for KRM resource. A kpt package can have multiple KRM resource instances matching the for filter. We call each instance of the KRM resource matching the for filter a forKRMInstance.example for resource filterFor: corev1.ObjectReference{  APIVersion: \"example.com/v1alpha1\",  Kind:    \"A\",}Lets assume the kpt package containsapiVersion: example.com/v1alpha1kind: Ametadata: name: a1apiVersion: example.com/v1alpha1kind: Ametadata: name: a2apiVersion: example.com/v1alpha1kind: Ametadata: name: a3This results in 3 for KRMInstances:example.com/v1alpha1.A.a1example.com/v1alpha1.A.a2example.com/v1alpha1.A.a3"
+}

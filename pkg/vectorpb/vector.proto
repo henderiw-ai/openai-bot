@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package vector;
+option go_package = "github.com/henderiw-ai/openai-bot/pkg/vectorpb";
+
+service VectorDB {    
+    // vector
+    rpc Insert (InsertRequest) returns (InsertResponse) {}
+    rpc Delete (DeleteRequest) returns (DeleteResponse) {}
+    rpc Get (GetRequest) returns (GetResponse) {}
+    rpc Query (QueryRequest) returns (stream QueryResponse) {}
+}
+
+message Vector {
+    string id = 1;
+    repeated float values = 2;
+    map<string,string> metadata = 3;
+}
+
+message ScoredVector {
+    Vector vector = 1;
+    float score = 2;
+}
+
+message InsertRequest {
+    Vector vectors = 1;
+}

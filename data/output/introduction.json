@@ -1,0 +1,5 @@
+{
+  "id": "introduction",
+  "tokens": 209,
+  "data": "The condkptsdk is an sdk that aims to simplify building functions/controllers that are part of a Condition choreography also called a Condition dance. In the \"Condition choreography/dance\" a set of independent actors together reach a certain outcome.- The actors are functions/controllers that act on a kpt package.- A role is performed by a particular instance of a function/controller that act on a particular KRM resource (what we call the for resource).- The conditional dance is a staged execution of the various actors/roles. (implemented using the kpt pipeline).- The outcome is a KRM resources/set of KRM resource specialized within a kpt package.The condkptsdk performs 3 main tasks:- filtering the resources a particular function/controller acts upon (implemented through for/own/watch filter attributes in the sdk)- lifecycle (CRUD) operation on behalf of the function/controllers- readiness gates on behalf of the functions/controllersThe condkptsdk is implemented using golang for now and is implemented on top of the kpt fn sdk"
+}

@@ -1,0 +1,5 @@
+{
+  "id": "generateresourcefn",
+  "tokens": 119,
+  "data": "The GenerateResourceFn provides:- the for object as a first parameter (if the object does not exist a nil pointer is provided)- the watch and own instance resource are provided as a listThe GenerateResourceFn function either updates the status or generates spec/(status) based on the resource information it is presented. E.g. NAD uses IP and VLAN and interface KRM to generate the KRM.signature of the generateResourceFn:type GenerateResourceFn func(*fn.KubeObject, fn.KubeObjects) (*fn.KubeObject, error)Any fn/controller MUST implement the GenerateResourceFn."
+}

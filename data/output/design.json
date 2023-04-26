@@ -1,0 +1,5 @@
+{
+  "id": "design",
+  "tokens": 174,
+  "data": "Given the condkptsdk has a lot of similarities with the controller runtime, the design of the condkptsdk is centered around the following resource types (also called filters):- for: the KRM resource the function/controller acts on- Owns: the child KRM resources derived from the for resource also called children- Watch: additional resources the function/controller uses for its executionEach of these resource types act as a filter within the SDK, such that the function/controller does not have to be bothered with all the other resources in the kpt package.A resource filter is identified through the Group/Version/Kind definitions of the KRM model expressed using apiVersion and KindexampleFor: corev1.ObjectReference{  APIVersion: nephioreqv1alpha1.GroupVersion.Identifier(),  Kind:    nephioreqv1alpha1.InterfaceKind,}"
+}
